@@ -4,6 +4,19 @@
 
 ## R1: Project Purpose & Description
 
+As a group who thoroughly appreciates a good read, but are in a digital age where the physical form factor of information is becoming less common, we wanted somewhere that our reading history could be stored. A digital personal library, so to speak, is something that we envision as a benefit to those who read anywhere around the world. When we researched current applications that tried to bring this concept to life, however, none really ticked all the boxes for the casual book enjoyer. Goodreads, whilst being owned by Amazon, has seen little support or development over its lifetime and has a range of issues that arn't appreciated by its users. Bookworm, whilst being about community and connectedness between likeminded individuals, can create a competitiveness that takes the focus off the enjoyment of reading and instead highlight how many books someone has read. Storygraph delves deep into the data and trends of an individuals reading habits, Bookly focuses on building reading habits, Readerly focuses on the reviewing of books, the list goes on.
+
+In summary, we found that there is a range of services out there for the casual reader, but none that keep it simple. None that keep it about the individual reader, and keep it simply about the books they have read and want to read. As a result, our team endevours to make the perfect, simple digital library web application that is built for the casual individual reader. The web app will be built using the MERN stack (MongoDB, Express, React, Node), and will be an aesthetically pleasing, responsive digital library that allows users to:
+
+- Easily sign up & log in
+- Create a list of books that the reader has read
+- Create a list of books that the reader would like to read
+- Allow the reader to search for books to add to the above two lists mentioned
+- Allow the reader to put a simple rating on books they have read if they choose
+- Display recommendations for the reader based on what they have read previously
+- Allow the reader to add custom book entries
+- Enable child accounts that stop the addition of inappropriate books
+
 ## R2: Dataflow Diagram
 
 ## R3: Application Architechture Diagram
