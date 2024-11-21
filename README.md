@@ -6,7 +6,7 @@
 
 As a group who thoroughly appreciates a good read, but are in a digital age where the physical form factor of information is becoming less common, we wanted somewhere that our reading history could be stored. A digital personal library, so to speak, is something that we envision as a benefit to those who read anywhere around the world. When we researched current applications that tried to bring this concept to life, however, none really ticked all the boxes for the casual book enjoyer. Goodreads, whilst being owned by Amazon, has seen little support or development over its lifetime and has a range of issues that arn't appreciated by its users. Bookworm, whilst being about community and connectedness between likeminded individuals, can create a competitiveness that takes the focus off the enjoyment of reading and instead highlight how many books someone has read. Storygraph delves deep into the data and trends of an individuals reading habits, Bookly focuses on building reading habits, Readerly focuses on the reviewing of books, the list goes on.
 
-In summary, we found that there is a range of services out there for the casual reader, but none that keep it simple. None that keep it about the individual reader, and keep it simply about the books they have read and want to read. As a result, our team endevours to make the perfect, simple digital library web application that is built for the casual individual reader. The web app will be built using the MERN stack (MongoDB, Express, React, Node), and will be an aesthetically pleasing, responsive digital library that allows users to:
+In summary, we found that there is a range of services out there for the casual reader, but none that keep it simple. None that keep it about the individual reader, and keep it simply about the books they have read and want to read. As a result, our team endevours to make the perfect, simple digital library web application that is built for the casual individual reader. The web app will be an aesthetically pleasing, responsive, and allow users to:
 
 - Easily sign up & log in
 - Create a list of books that the reader has read
@@ -16,6 +16,16 @@ In summary, we found that there is a range of services out there for the casual 
 - Display recommendations for the reader based on what they have read previously
 - Allow the reader to add custom book entries
 - Enable child accounts that stop the addition of inappropriate books
+
+Our team is utilising the MERN stack (MongoDB, Express, React, Node) framework for the creation of our web app, along with a range of npm package dependancies including:
+- Jsonwebtoken
+- Dotenv
+- Bcrypt
+- Mongoose
+- Cors
+- Nodemon
+
+For deployment, we will be using netlify for the front-end, along with render for the back-end. Project management is conducted on Trello, while version control is handled by Git and Github. Shared file storage is handled by Google Drive.
 
 ## R2: Dataflow Diagram
 
