@@ -70,6 +70,11 @@ With the further persona development established, the user stories could be revi
 
 
 ## R5: Wireframes
+For the pages that store each collection of books - ‘Reads’ and ‘TBR’ (To Be Read) - that the user has saved, we wanted to emulate the appearance of bookshelves with the simplistic design, displaying the front cover of the books with minimal other information. To display more information about a book, the user clicks (mobile) or hovers over (desktop) the relevant book. This will display the book’s title and author, as well as the user’s rating on the ‘Reads’ page.
+
+With the simplistic design of the pages that display the “bookshelves”, we decided to make separate pages for the ‘search‘ and ‘recommendations’ pages. This was because we wanted to display more information per book on these pages, so by making them separate we were able to keep the simplistic design of the “bookshelf pages.”
+Once this decision was made we needed to add more buttons to the top of the page, and since this made the number of buttons four, we decided that a navigation bar was a better option, to keep the buttons organised. A search option was also added on the bar for the ‘Reads’ and ‘TBR’ pages so that a user quickly and easily can locate a book they have previously stacked there.
+
 
 ## R6: Project Management
 
