@@ -27,9 +27,128 @@ Our team is utilising the MERN stack (MongoDB, Express, React, Node) framework f
 
 For deployment, we will be using netlify for the front-end, along with render for the back-end. Project management is conducted on Trello, while version control is handled by Git and Github. Shared file storage is handled by Google Drive.
 
-## R2: Dataflow Diagram
+## R2: Dataflow Diagrams
+
+Below are representations of data flow for the virtual bookshelf application, BookHaven. The diagrams are layers that build on the high level application architecture diagram, and utilise the notation standard of 'Yourdon and Coad', where external entites are represented in rectangles and processes in circles. 
+
+### Virtual Bookshelf - Layer 1
+
+![DFD Layer 1](./assets/bookhaven_dfd_layer1.png)
+
+### Auth Data Flow - Layer 2
+
+##### Sign-up User
+
+![Auth Signup Layer 2](./assets/bookhaven_dfd_layer2_auth_signup.png)
+
+1. A POST request is sent by the user to the `/auth/signup` endpoint with user information such as name, email & password. 
+2. User details will be passed to a function to handle user registration. First user details will be validated for proper format and the email provided will be checked to verify that it is unique. The password will also be hashed for extra security.
+3. If validation criteria is not met or the email is not unique, an error message will be sent back to the client. 
+4. User will be saved with a userId, user details and the hashed password to the database.
+5. User ID and email passed to a function to generate a JSON web token or JWT.
+6. The JWT is passed back to the user on the front end to be stored and utilised for authentication. 
+
+
+
+
+##### Login User
+
+![Auth Login Layer 2](./assets/bookhaven_dfd_layer2_auth_login.png)
+
+1. A POST request sent to the `/auth/login` endpoint with email and password. 
+2. Details are sent to Backend Server, where a function to handle login is located within the Auth controller. Details are initially checked against validation format, and if criteria isn/t met, an error message is sent back to the user. 
+3. Email/userId is sent to be checked within the database for existing records using an async function
+4. If email/userId exists within database records, the document with the user details and hashed password is sent back to the server for use within the handleLogin() function.
+5. The hashed password received from the document retrieved is verified, if not verified, an error is sent back to the user. 
+6. A JWT is generated via a function with userId and email passed as parameters.
+7. The JWT is then returned to the user on the front end for storage, alongside the userId, the saved preferences for UI/UX and any permissions associated with that user. The JWT is sent as a header for all further user requests within the application until it expires as specified when the token is generated. 
+
+### User Data Flow - Layer 2 **Optional Functionality** 
+
+##### Update User
+
+![Update user](./assets/bookhaven_dfd_layer2_update_user.png)
+
+1. PUT/PATCH requested by user, sent with a _id to server
+2. Server receives request and validates, returning an error if occurs.
+3. Query is sent to the database by the server to update data.
+4. The database receives and executes the request sending a response.
+5. Response is returned to user. The front end React app then saves the changes in state.  
+
+##### Delete User
+
+![Delete user](./assets//bookhaven_dfd_layer2_delete_user.png)
+
+1. DELETE requested by user, sent with a _id to server
+2. Server receives request and validates, returning an error if occurs.
+3. Query is sent to the database by the server to delete data.
+4. The database receives and executes the request sending a response.
+5. Response is returned to user. The front end React app then saves the changes in state.
+
+### Bookshelf Interaction - Layer 2
+
+##### Adding a new book to shelf
+
+![Add a Book](./assets/bookhaven_dfd_layer2_add_book.png)
+
+1. The client decides to add a new book to virtual bookshelf by creating a search query.
+2. A request will be sent to an external API asynchronously to search for a book that meets criteria inputted by user. Books can searched by title, author, or id's such as ISBN.
+3.  If found in the API the book will be returned in JSON format, else an error will be caught. 
+4. Error or book data is returned.
+5. The details in the book record will be passed to another function that will handle its storage in the database. 
+6. The book is saved to the database associated with the User collection.
+7. The book is returned to the front end for the user and saved by the React app. 
+
+
+##### Find a new book
+
+![Find a book](./assets/bookhaven_dfd_layer2_find_book.png)
+
+1. Client requests details of a saved book on the virtual bookshelf 
+2. A function to handle to handle the fetch request is sent to the database to retrieve details of a book matching the bookId passed in the request. 
+3. A list of objects matching the search parameters given by user is returned from the API in JSON format. 
+4. The information is sent back to the front end for the user and saved by the React app. 
+
+##### Recommendations
+
+![Recommended](./assets/bookhaven_dfd_layer2_recommended.png)
+
+1. A fetch request is triggered by user on the front end. 
+2. A function to handle recommendations in the server receives the GET request. This function handles both async functions for database and API request. 
+3.  This function handles the asynchronous call to the database to collect data from saved books utilising userId to collect associated book documents. 
+4. Database receives the request and sends back an array of book objects.
+5. The array of book objects is then sent to the handle recommends function to isolate query parameters for a request to the API, based on the data collected from the database.
+6. The parameters from handle recommendation are sent to the second async function to request books from the API. 
+7. The request is sent to the API to collect book data matching parameters.
+8. Return an array of book objects to the server. 
+9. The handle recommend function will further validate the data to be sent back to the front end.
+10. A final array of book objects will be sent to the front end and saved in state. 
+
+##### Update Book
+
+![Update book](./assets/bookhaven_dfd_layer2_update_book.png)
+
+1. PUT/PATCH requested by user, sent with a _id to server
+2. Server receives request and validates, returning an error if occurs.
+3. Query is sent to the database by the server to update data.
+4. The database receives and executes the request sending a response.
+5. Response is returned to user. The front end React app then saves the changes in state. 
+
+##### Delete Book
+
+![Delete book](./assets/bookhaven_dfd_layer2_delete_book.png)
+
+1. DELETE requested by user, sent with a _id to server
+2. Server receives request and validates, returning an error if occurs.
+3. Query is sent to the database by the server to delete data.
+4. The database receives and executes the request sending a response.
+5. Response is returned to user. The front end React app then saves the changes in state
 
 ## R3: Application Architechture Diagram
+
+A high level diagram for the archtiecture of the application. 
+
+![Architecture Diagram](./assets/bookhaven_architecture_diagram.png)
 
 ## R4: User Stories
 
