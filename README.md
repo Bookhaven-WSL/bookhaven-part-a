@@ -104,10 +104,10 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ![Find a book](./assets/bookhaven_dfd_layer2_find_book.png)
 
-1. Client requests details of a saved book on the virtual bookshelf 
-2. A function to handle to handle the fetch request is sent to the database to retrieve details of a book matching the bookId passed in the request. 
-3. A list of objects matching the search parameters given by user is returned from the API in JSON format. 
-4. The information is sent back to the front end for the user and saved by the React app. 
+1. GET request is triggered by user on front end and sent to the server. 
+2. A function to handle to handle the fetch request receives the requests and handles validation. The server then sends a query to the API.
+3. The API receives the request and returns an array of book objects based on parameters. 
+4. The information is sent back to the front end for the user and saved by the React app for further interaction by the client, potentially to be added and saved to the database.  
 
 ##### Recommendations
 
