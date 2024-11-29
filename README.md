@@ -220,7 +220,11 @@ Once this decision was made we needed to add more buttons to the top of the page
 
 ## R6: Project Management
 
-For our team planning and management, we choose Trello as the tool of choice, tracking our agile fortnight long sprints. Within each sprint, we conducted 4 meetings/stand-ups (2 per week), and continued to communicate via discord in the meantime. Below is the progression of our Trello board from the beginning to the end of T3A3 Part A:
+For our team planning and management, we choose Trello as the tool of choice, tracking our agile fortnight long sprints. Within each sprint, we conducted 4 meetings/stand-ups (2 per week), and continued to communicate via discord in the meantime. Below is an example task card, along with the progression of our Trello board from the beginning to the end of T3A3 Part A:
+
+### Card Example
+
+![Card Example](./docs/Trello/CardExample.png)
 
 ### Sprint 1
 
