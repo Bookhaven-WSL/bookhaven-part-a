@@ -33,13 +33,13 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ### Virtual Bookshelf - Layer 1
 
-![DFD Layer 1](./assets/bookhaven_dfd_layer1.png)
+![DFD Layer 1](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer1.png)
 
 ### Auth Data Flow - Layer 2
 
 ##### Sign-up User
 
-![Auth Signup Layer 2](./assets/bookhaven_dfd_layer2_auth_signup.png)
+![Auth Signup Layer 2](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_auth_signup.png)
 
 1. A POST request is sent by the user to the `/auth/signup` endpoint with user information such as name, email & password. 
 2. User details will be passed to a function to handle user registration. First user details will be validated for proper format and the email provided will be checked to verify that it is unique. The password will also be hashed for extra security.
@@ -53,7 +53,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Login User
 
-![Auth Login Layer 2](./assets/bookhaven_dfd_layer2_auth_login.png)
+![Auth Login Layer 2](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_auth_login.png)
 
 1. A POST request sent to the `/auth/login` endpoint with email and password. 
 2. Details are sent to Backend Server, where a function to handle login is located within the Auth controller. Details are initially checked against validation format, and if criteria isn/t met, an error message is sent back to the user. 
@@ -67,7 +67,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Update User
 
-![Update user](./assets/bookhaven_dfd_layer2_update_user.png)
+![Update user](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_update_user.png)
 
 1. PUT/PATCH requested by user, sent with a _id to server
 2. Server receives request and validates, returning an error if occurs.
@@ -77,7 +77,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Delete User
 
-![Delete user](./assets//bookhaven_dfd_layer2_delete_user.png)
+![Delete user](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_delete_user.png)
 
 1. DELETE requested by user, sent with a _id to server
 2. Server receives request and validates, returning an error if occurs.
@@ -89,7 +89,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Adding a new book to shelf
 
-![Add a Book](./assets/bookhaven_dfd_layer2_add_book.png)
+![Add a Book](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_add_book.png)
 
 1. The client decides to add a new book to virtual bookshelf by creating a search query.
 2. A request will be sent to an external API asynchronously to search for a book that meets criteria inputted by user. Books can searched by title, author, or id's such as ISBN.
@@ -102,7 +102,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Find a new book
 
-![Find a book](./assets/bookhaven_dfd_layer2_find_book.png)
+![Find a book](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_find_book.png)
 
 1. GET request is triggered by user on front end and sent to the server. 
 2. A function to handle to handle the fetch request receives the requests and handles validation. The server then sends a query to the API.
@@ -111,7 +111,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Recommendations
 
-![Recommended](./assets/bookhaven_dfd_layer2_recommended.png)
+![Recommended](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_recommended.png)
 
 1. A fetch request is triggered by user on the front end. 
 2. A function to handle recommendations in the server receives the GET request. This function handles both async functions for database and API request. 
@@ -126,7 +126,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Update Book
 
-![Update book](./assets/bookhaven_dfd_layer2_update_book.png)
+![Update book](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_update_book.png)
 
 1. PUT/PATCH requested by user, sent with a _id to server
 2. Server receives request and validates, returning an error if occurs.
@@ -136,7 +136,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 ##### Delete Book
 
-![Delete book](./assets/bookhaven_dfd_layer2_delete_book.png)
+![Delete book](./docs/Dataflow_and_Architecture/bookhaven_dfd_layer2_delete_book.png)
 
 1. DELETE requested by user, sent with a _id to server
 2. Server receives request and validates, returning an error if occurs.
@@ -152,7 +152,7 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 
 A high level diagram for the archtiecture of the application. 
 
-![Architecture Diagram](./assets/bookhaven_architecture_diagram.png)
+![Architecture Diagram](./docs/Dataflow_and_Architecture/bookhaven_architecture_diagram.png)
 
 ## R4: User Stories
 
