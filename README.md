@@ -29,7 +29,7 @@ For deployment, we will be using netlify for the front-end, along with render fo
 
 ## R2: Dataflow Diagrams
 
-Below are representations of data flow for the virtual bookshelf application, BookHaven. The diagrams are layers that build on the high level application architecture diagram, and utilise the notation standard of 'Yourdon and Coad', where external entites are represented in rectangles and processes in circles. 
+Below are representations of data flow for the virtual bookshelf application, BookHaven. The diagrams are layers that build on the high level application architecture diagram, and utilise the notation standard of Yourdon and Coad(1), where external entites are represented in rectangles and processes in circles. 
 
 ### Virtual Bookshelf - Layer 1
 
@@ -143,6 +143,10 @@ Below are representations of data flow for the virtual bookshelf application, Bo
 3. Query is sent to the database by the server to delete data.
 4. The database receives and executes the request sending a response.
 5. Response is returned to user. The front end React app then saves the changes in state
+
+
+(1) Virtual Paradigm, 2024, sourced November 2024, https://online.visual-paradigm.com/knowledge/software-design/dfd-tutorial-yourdon-notation
+
 
 ## R3: Application Architechture Diagram
 
