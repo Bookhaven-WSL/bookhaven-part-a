@@ -200,19 +200,29 @@ Once this decision was made we needed to add more buttons to the top of the page
 
 ### Mobile version
 ![Mobile - reads](https://github.com/user-attachments/assets/35a94b0b-64f1-4cc0-b0b5-0f711910bbcf)
+The menu button and enhancement glass will be static on the page so that the user can easily navigate to other pages of the app without having to scroll back to the top.
 ![Mobile - menu expanded](https://github.com/user-attachments/assets/a2e3b853-b9f4-4a5d-939a-0137abfc5a40)
+The menu expands over the top of the other elements on the page.
 ![Mobile - tbr](https://github.com/user-attachments/assets/98350dd0-8fd3-44d2-9d08-ceeafaf4d42f)
+The stacking of the book covers represents the look of books on a shelf, keeping the interface clean and simple.
 ![Mobile - add](https://github.com/user-attachments/assets/132497fa-7882-4f9d-8650-294e43ad4100)
+If no books have been added to the 'Reads' shelf, the below error message will be displayed.
 ![Mobile - recs](https://github.com/user-attachments/assets/6b20ac23-728b-47d1-81d1-13c0387d5abd)
+This error message is displayed on the 'Reads' page if no books have been added to it, on the 'TBR' page if no books have been added to it, and on the 'recs' page if no books have been added to the 'Reads' page. An error message is also shown if the user searches for a book in the navbar integrated search bar that has not been added to a shelf.
 ![Mobile - error message](https://github.com/user-attachments/assets/bdaf6a62-2dd2-454d-9633-ef93515dd211)
+Underneath the error message is a button that will redirect the user to the 'add' page, to prompt the user to add books, which will remove the error message.
 ![Mobile - sign up-in](https://github.com/user-attachments/assets/adbc859c-01d7-4286-8f78-5a6c50714723)
 
 ### Desktop version
 ![Desktop - reads](https://github.com/user-attachments/assets/5566fdf4-ce79-4f27-92de-0a3986c1c133)
+The books are equally spaced across the page in rows of five.  This is to simulate the appearance of a bookshelf for the theme of the app. In the desktop version there is a navigation bar for the user to navigate between pages rather than a collapsible menu like on the mobile version. This allows a one-click path to the user's desired page.
 ![Desktop - title selected](https://github.com/user-attachments/assets/0efabee2-42c5-4bc2-835b-516d0f949fa5)
+On the desktop version, the user only needs to hover over a title to display more information, rather than clicking on it like in the mobile version. This is will allow a soft flow between selected titles.
 ![Desktop - search title](https://github.com/user-attachments/assets/da5d1b4b-1d30-4d16-aeed-513e2a6a4368)
+The search bar is integrated into the navbar for a simplistic look, and only expands when the user clicks on the enhancement glass.
 ![Desktop - tbr](https://github.com/user-attachments/assets/ed1fb32e-5cfe-453e-a6e8-66b5db1ddb78)
 ![Desktop - add](https://github.com/user-attachments/assets/e7cd2b51-17f2-461c-97ce-3e887da71bef)
+The add page prompts the user to search for a title using the search bar.
 ![Desktop - recs](https://github.com/user-attachments/assets/3d997f59-9dc5-403a-82cc-7ba73d8cb3c2)
 ![Desktop - error message](https://github.com/user-attachments/assets/e188492f-6717-4337-9b41-f6f4c70e2588)
 ![Desktop - sign up-in](https://github.com/user-attachments/assets/6b7bcd41-b9c3-4ce6-bcb8-2efad8ff701a)
